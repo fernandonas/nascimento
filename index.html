@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #005d91;
+        }
+
+        #numero {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dado Online!</h1>
+    <p>Clique no botão abaixo para ver o número sorteado:</p>
+    <button onclick="mostrarNumeroSorteado()">Rolar o Dado</button>
+    <p id="numero"></p>
+
+    <script>
+        function mostrarNumeroSorteado() {
+            var numeroAleatorio = Math.floor(Math.random() * 6) + 1;
+            var mensagem = "Seu número é: " + numeroAleatorio + "!";
+            document.getElementById("numero").innerHTML = mensagem;
+        }
+    </script>
+</body>
+</html>
